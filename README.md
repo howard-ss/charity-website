@@ -4,10 +4,10 @@ Week 4 (3/12): During the PD session in week 4, you will get 20/25 mins to work 
 
 Week 5 (10/11): There will be no PD session next week, instead you will be presenting your MVP and everything you have researched over the past 4 weeks to the class. Each week you were asked to create some sort of slides or documents and you will now get a chance to present it all to your peers. Your presentation should have the following as a minimum
 
-   >> Your understanding of different roles in tech
-   >> What is agile - explain the 4 principles
-   >> Tell us your idea for the project
-   >> What did the decision making process look like in choosing your final idea
-   >> Any conflicts or issues that arrived and how you overcame them as a team.
+** Your understanding of different roles in tech
+** What is agile - explain the 4 principles
+** Tell us your idea for the project
+** What did the decision making process look like in choosing  your final idea
+** Any conflicts or issues that arrived and how you overcame them as a team.
 
-From the 17th of December to the 21st of January (4 Saturday sessions include 2 week christmas break), you will work on this project during the PD sessions; you will spend the of the class time building your MVP with your team, and we will have some project related exercises.
+From the 17th of December 2022 to the 21st of January 2023 (4 Saturday sessions include 2 week christmas break), you will work on this project during the PD sessions; you will spend the of the class time building your MVP with your team, and we will have some project related exercises.
