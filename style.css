@@ -1,39 +1,172 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: lightblue;
-  color: darkblue;
+:root {
+  --background: rgba(0, 214, 170, .50);
+  /* definding a var, I can use it many times
+     */
 }
 
-header {
-  background-color: darkblue;
+body {
+  margin: 0;
+  background: #222;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-weight: 400;
   color: white;
+}
+
+.content {
+  height: 200vh;
+  width: 100%;
+  background-image: url("Img/6.jpg");
+  background-color: #333;
+  background-blend-mode: multiply;
+  /*?? */
+  background-size: cover;
+  background-position: center;
+  display: grid;
+
+}
+
+
+/* logo */
+.logo img {
+  width: 150px;
+  filter: drop-shadow(1px 1px 40px white);
+}
+
+.logo img:hover {
+  filter: drop-shadow(1px 1px 10px red);
+
+}
+
+
+/* nav style start here */
+
+header {
+  background: var(--background);
+  text-align: center;
+   position: relative;
+   /* we can put fixed to make it nacer */ 
+  /*bexcause we put position: fixed i define z-index */
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  /* we don't need the chechbox icon any more */
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  /* its only to be line up with our 
+    nav li which has same margin */
+  /*border: 1px solid red ;  we dont need to border after we adjust it*/
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  /* I put it to use align-items */
   align-items: center;
-  padding: 0 20px;
+}
+
+/* we need three small line so we need to do some sudo class with span */
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+  /*it's for my span and not sudo */
+}
+
+/* we need two more line */
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  /*we don't need to put any thing but now we have three line it
+     show the line is getting thicker */
+  position: absolute;
+  /* so we can move the two lines to bottom and top.
+      have a look to two next code*/
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  /* because our header is position:fixed , this position
+     will be relative with overal positions in  hedear */
+  text-align: left;
+  top: 100%;
+  /* 100% the way down  also */
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  /*display: none; we don't need it any more because we want
+     to make some effect(transitions)*/
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
+  /* we just reset the margin and padding */
+  list-style: none;
 }
 
 nav li {
-  margin: 0 10px;
+  margin-bottom: 1em;
+  margin-left: 1em;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out 250ms;
+  /* its for delay and anination,
+     its gonna fade out very fast */
+
 }
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked~nav {
+  /* display: block; /* if the nav checked the nav will appear */
+  transform: scale(1, 1);
+
+}
+
+/* ~ it looking for any sibiling, it doesn't have to be 
+ immediately after. the nav is right after */
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+  /* when we clicked(checked) it gonna to apear with animation */
+}
+
+
 
 .hero {
   display: flex;
-  justify-content
+  justify-content:
+  
 }
 
 .hero img {
@@ -65,16 +198,90 @@ nav a {
 }
 
 footer {
-  background-color: darkblue;
+  background:var(--background);
   color: white;
   text-align: center;
   padding: 20px;
 }
 
-a {
-  color: orange;
-}
 
 h1, h2, h3 {
   color: orange;
 }
+
+
+/* now its time to make it responsive 
+this media is only for nav so we should update it for body as well
+*/
+
+@media screen and (min-width: 800px) {
+
+  /* we don't need  the three line anymore so we non it */
+  .nav-toggle-label {
+    display: none;
+  }
+
+  /* now we have to set up our header */
+  header {
+    display: grid;
+    /* so we can do nice things with div containers */
+    grid-template-columns: 1fr auto minmax(700px, 3fr) 1fr;
+    /* we have 4 columns : auto for logo and minmax for nav , which is minimum 600px and max 1fr . */
+  }
+
+  /* now its time to adjust our things on the grid */
+  .logo {
+    grid-column: 2 / 3;
+    /* we also can use span =>  grid-column: 2/ span 1; */
+  }
+
+  nav {
+    all: unset;
+    /* we have done  lots of style on nav and we don't want to remove
+     them so we can use => all:unst; it just takking off all the things which we did before */
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  /* Hover effect*/
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    /* transform-origin: right; I want to be from middle */
+    transition: transform ease-in-out 250ms;
+    /* we put some delay */
+
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+
+  }
+}
+
+/* we done our nav here */
+ 
