@@ -12,7 +12,7 @@ Week 5 (10/11): There will be no PD session next week, instead you will be prese
 
 From the 17th of December 2022 to the 21st of January 2023 (4 Saturday sessions include 2 week christmas break), you will work on this project during the PD sessions; you will spend the of the class time building your MVP with your team, and we will have some project related exercises.
 
-Aman Singh's  annoucement on 16 Juanuary 202 on Slack:
+Aman Singh's  annoucement on 16 Juanuary 2023 on Slack:
 quick announcement regarding your Buddy Group Presentations. The Presentations were supposed to be next week, the 21st of January, however, due to the classes being held online, we have decided to move all presentations to the 28th of January. Each team will have maximum 10 mins to present their Projects.Your presentation should cover the following:
 
     An explanation of what you have developed
