@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request a Donation</title>
+    <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="request.html">Request Donation</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>   
+
+
+<form>
+  <h2>Requester Information</h2>
+  <p>Please enter your details below:</p>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" size="64"  maxlength="64" /><br>
+  <label for="amount">Requested Amount:</label><br>
+  <input type="number" id="amount" name="amount"><br>
+  <label for="accountNumber">Account Number:</label><br>
+  <input type="text" id="accountNumber" name="accountNumber" size="64"  maxlength="64" /><br>
+  <label for="accountName">Account Name:</label><br>
+  <input type="text" id="accountName" name="accountName" size="64"  maxlength="64" /><br>
+  <label for="sortCode">Sort Code:</label><br>
+  <input type="text" id="sortCode" name="sortCode" size="8"  maxlength="8" pattern=^[1-9]{2}\s?\-?[1-9]{2}\s?\-?[1-9]{2}$ /><br> 
+  <input type="submit" value="Submit">
+</form> 
+<p>Thank you for requesting a donation.We will transfer the donation after completing the necessary checks.</p>
+
+
+</body>
+</html>
