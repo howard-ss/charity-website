@@ -22,3 +22,16 @@ quick announcement regarding your Buddy Group Presentations. The Presentations w
     Discuss two or three features you would add to the complete version but did not add to the MVP. What was the reasoning for not including them?
 
 Remember to use an appropriate balance of presentation slides and spoken word.
+
+Aman Singh posted last requirements on 25 January 2023 as following:
+Our Group Project Presentation will be this Saturday. We will be starting at 10am and each team will have about 10 minutes to present. Please make sure you are on time as we will all be in the same room for presentations and wont be split up like last time. If you still have not made the presentations, heres a little reminder of what you can include.
+
+1. An explanation of what you have developed
+2. Discuss things that worked well within your team and what didn't work well?  
+   what would you do differently next time?
+3. What are some characteristics did you bring to the team and what are some things
+   that you as an individual need to work on.
+4. What is the purpose of your product? Convince, inform, tell a story: Relate this
+   to the global issue your team have chosen.
+5. Discuss two or three features you would add to the complete version but did not 
+   add to the MVP. What was the reasoning for not including them?
